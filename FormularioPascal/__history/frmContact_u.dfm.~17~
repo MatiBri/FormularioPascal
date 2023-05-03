@@ -1,0 +1,244 @@
+object frmContact: TfrmContact
+  Left = 0
+  Top = 0
+  Caption = 'Contact Form'
+  ClientHeight = 501
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 175
+    Top = 10
+    Width = 300
+    Height = 25
+    BevelOuter = bvNone
+    Caption = 'Contact Information'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -27
+    Font.Name = 'Algerian'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 29
+    Top = 41
+    Width = 240
+    Height = 240
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 24
+      Top = 21
+      Width = 51
+      Height = 13
+      Caption = 'First Name'
+    end
+    object Label2: TLabel
+      Left = 33
+      Top = 45
+      Width = 42
+      Height = 13
+      Caption = 'Surname'
+    end
+    object Label3: TLabel
+      Left = 40
+      Top = 70
+      Width = 35
+      Height = 13
+      Caption = 'Gender'
+    end
+    object Label4: TLabel
+      Left = 56
+      Top = 95
+      Width = 19
+      Height = 13
+      Caption = 'Age'
+    end
+    object Image1: TImage
+      Left = 80
+      Top = 128
+      Width = 105
+      Height = 105
+    end
+    object Edit1: TEdit
+      Left = 80
+      Top = 10
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 80
+      Top = 35
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object ComboBox1: TComboBox
+      Left = 80
+      Top = 65
+      Width = 120
+      Height = 21
+      Style = csDropDownList
+      ItemIndex = 0
+      TabOrder = 2
+      Text = 'Male'
+      Items.Strings = (
+        'Male'
+        'Female'
+        'Other')
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 80
+      Top = 90
+      Width = 40
+      Height = 22
+      MaxValue = 100
+      MinValue = 15
+      TabOrder = 3
+      Value = 20
+    end
+  end
+  object Panel3: TPanel
+    Left = 275
+    Top = 40
+    Width = 230
+    Height = 125
+    TabOrder = 2
+    object Label5: TLabel
+      Left = 44
+      Top = 15
+      Width = 30
+      Height = 13
+      Caption = 'Street'
+    end
+    object Label6: TLabel
+      Left = 55
+      Top = 40
+      Width = 19
+      Height = 13
+      Caption = 'City'
+    end
+    object Label7: TLabel
+      Left = 35
+      Top = 75
+      Width = 39
+      Height = 13
+      Caption = 'Country'
+    end
+    object Label8: TLabel
+      Left = 17
+      Top = 100
+      Width = 57
+      Height = 13
+      Caption = 'Postal Code'
+    end
+    object Edit3: TEdit
+      Left = 80
+      Top = 10
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object Edit4: TEdit
+      Left = 80
+      Top = 37
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+    object Edit5: TEdit
+      Left = 80
+      Top = 64
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
+    object Edit6: TEdit
+      Left = 80
+      Top = 91
+      Width = 121
+      Height = 21
+      TabOrder = 3
+    end
+  end
+  object Panel4: TPanel
+    Left = 275
+    Top = 181
+    Width = 230
+    Height = 100
+    TabOrder = 3
+    object Label9: TLabel
+      Left = 24
+      Top = 15
+      Width = 50
+      Height = 13
+      Caption = 'Telephone'
+    end
+    object Label10: TLabel
+      Left = 50
+      Top = 45
+      Width = 24
+      Height = 13
+      Caption = 'Email'
+    end
+    object Edit7: TEdit
+      Left = 80
+      Top = 10
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object Edit8: TEdit
+      Left = 80
+      Top = 40
+      Width = 121
+      Height = 21
+      TabOrder = 1
+    end
+  end
+  object Panel5: TPanel
+    Left = 511
+    Top = 40
+    Width = 100
+    Height = 450
+    BevelInner = bvLowered
+    TabOrder = 4
+    object Button1: TButton
+      Left = 15
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'Display'
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 15
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = '&Reset'
+      Kind = bkRetry
+      NumGlyphs = 2
+      TabOrder = 1
+    end
+    object BitBtn4: TBitBtn
+      Left = 15
+      Top = 415
+      Width = 75
+      Height = 25
+      Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
+    end
+  end
+end

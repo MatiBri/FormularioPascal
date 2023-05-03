@@ -1,0 +1,120 @@
+unit frmContactForm_u;
+
+{1, 2, 3: Contiene las declaracións de todos los componentes que se colocan en el Form}
+
+interface {1}
+
+uses {2}
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Samples.Spin, Vcl.Imaging.pngimage, Vcl.ComCtrls;
+
+type {3}
+  TfrmContact = class(TForm)
+    pnlHeader: TPanel;
+    pnlPersonalInformation: TPanel;
+    pnlAddressInformation: TPanel;
+    pnlContactInformacion: TPanel;
+    pnlActions: TPanel;
+    btnDisplay: TButton;
+    bmbReset: TBitBtn;
+    bmbClose: TBitBtn;
+    lblFirstName: TLabel;
+    lblSurname: TLabel;
+    lblGender: TLabel;
+    lblAge: TLabel;
+    lblStreet: TLabel;
+    lblCity: TLabel;
+    lblCountry: TLabel;
+    lblPostalCode: TLabel;
+    lblTelephone: TLabel;
+    lblEmail: TLabel;
+    edtFirstName: TEdit;
+    edtSurname: TEdit;
+    edtStreet: TEdit;
+    edtCity: TEdit;
+    edtCountry: TEdit;
+    edtPostalCode: TEdit;
+    edtTelephone: TEdit;
+    edtEmail: TEdit;
+    cbxGender: TComboBox;
+    sedAge: TSpinEdit;
+    imgPhoto: TImage;
+    chkSendNewsLetter: TCheckBox;
+    redOutput: TRichEdit;
+    procedure btnDisplayMouseEnter(Sender: TObject);
+    procedure btnDisplayMouseLeave(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+
+  end;
+
+var
+  frmContact: TfrmContact;
+
+  {1, 2 - Sección de implementación: }
+implementation {1}
+
+{$R *.dfm} {2}
+
+{Resetea todos los componentes a su estado original}
+procedure TfrmContact.bmbResetClick(Sender: TObject);
+begin
+      edtFirstName.Clear; //Limpia el objeto FirstName Edit y lo deja vacío
+      edtSurname.Clear; //Limpia el objeto SurName Edit y lo deja vacío
+      edtStreet.Clear;
+      edtCity.Clear;
+      edtCountry.Clear;
+      edtPostalCode.Clear;
+      edtTelephone.Clear;
+      edtEmail.Clear;
+      redOutput.Clear; {Borra el mensaje que aparece del objeto TRichEdit}
+
+
+    {Las siguientes lineas de código no son llamados a métodos}
+    {Pero debemos cambiar algunas propiedades para resetear los elementos del Form a sus valores originales}
+
+    {1}
+    {Combo Box}
+      cbxGender.ItemIndex := 0; {Un Index en Programación ES SIEMPRE UN NÚMERO (Integer)}
+    {Cada ítem en un Combo Box siempre es un llamado a una propiedad llamado ItemIndex}
+    {El primer ítem en un Combo Box siempre es de 0 (En este caso dentro de ese 0 se encuentra el valor "Male")}
+    {Por lo tanto, 1 sería el segundo valor "Female"}
+    {2}
+    {Spin Edit}
+      sedAge.Value := 20; {Cuando se resetee, el valor original volverá a ser de 20}
+    {3}
+    {Check Box de Send Newsletter}
+      chkSendNewsLetter.Checked := True;
+    {4}
+    {Form Caption}
+      frmContact.Caption := 'Contact Form';
+    {5}
+    {TRich Edit de vuelva a blanco}
+      redOutput.Color := clWhite;
+
+
+    {6}
+    {Cuando reseetemos el Form, el programa pasará a enfocar el cursor en el primer Edit del nombre}
+      edtFirstName.SetFocus;
+
+
+end;
+
+procedure TfrmContact.btnDisplayMouseEnter(Sender: TObject);
+begin
+      btnDisplay.Left := 5; {Cambia la propiedad "Left" de 15 a 5}
+      btnDisplay.Width := 90; {Cambia la propiedad del ancho "Width" a 90}
+      btnDisplay.Caption := 'Click to Display'; {Cambia el nombre del botón a Click to Display}
+end;
+
+procedure TfrmContact.btnDisplayMouseLeave(Sender: TObject);
+begin
+      btnDisplay.Left := 15;
+      btnDisplay.Width := 75;
+      btnDisplay.Caption := 'Display';
+end;
+
+end
